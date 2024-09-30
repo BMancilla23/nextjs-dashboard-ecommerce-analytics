@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-commerce Dashboard Analytic
 
-## Getting Started
+## Descripción
 
-First, run the development server:
+El **E-commerce Dashboard Analytic** es una plataforma diseñada para administrar un comercio electrónico, brindando control total a los administradores sobre usuarios, productos, pedidos y clientes. Este sistema ofrece un panel de administración interactivo y seguro que incluye validaciones avanzadas, animaciones fluidas y componentes reutilizables para una experiencia de usuario optimizada.
+
+## Características
+
+- **Control de Acceso del Administrador**: Los administradores pueden aprobar o denegar solicitudes de usuarios registrados para otorgarles acceso al sistema.
+- **Prisma ORM con PostgreSQL**: Conexión eficiente con la base de datos utilizando Prisma para la gestión de usuarios, productos, pedidos y clientes.
+- **Animaciones con Framer Motion**: Transiciones y animaciones fluidas para mejorar la experiencia de usuario durante la navegación.
+- **Componentes Reutilizables con ShadCN**: Implementación de un sistema de componentes personalizables y reutilizables para mantener la coherencia del diseño.
+- **Manejo de Imágenes con UploadThing**: Integración con UploadThing para gestionar la carga y visualización de imágenes de productos y usuarios.
+- **Next Safe Actions**: Seguridad en las acciones del servidor para validar solicitudes y prevenir vulnerabilidades.
+- **React Hook Form y Zod**: Formularios robustos con validaciones personalizadas utilizando `react-hook-form` y `Zod`.
+- **Validaciones con Zod**: Uso de resolvers de `react-hook-form` para validar datos de forma avanzada con Zod.
+- **Diseño Responsive**: Adaptación a dispositivos móviles, tablets y pantallas grandes.
+
+## Instalación
+
+Sigue los pasos a continuación para instalar y configurar el proyecto en tu entorno local:
+
+1. **Clona el repositorio**:
+
+   ```bash
+   git clone https://github.com/TuUsuario/ecommerce-dashboard-analytic.git
+   ```
+
+2. **Navega al directorio del proyecto**
+
+   ```bash
+   git clone https://github.com/TuUsuario/ecommerce-dashboard-analytic.git
+   ```
+
+3. **Instala las dependencias**
+
+   ```bash
+   npm install
+   ```
+
+4. **Configura las variables de entorno copiando el archivo de ejemplo `.env.example` a `.env` **
+
+   ```bash
+   cp .env.example .env
+   ```
+
+5. **Ejecuta las migraciones para preparar la base de datos**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+   npx prisma migrate dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. **Iniciar el servidor de de desarrollo**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+   npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Vista previa del proyecto
 
-## Learn More
+### Login
 
-To learn more about Next.js, take a look at the following resources:
+![Vista de login](/docs/login.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Overview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Vista de login](/docs/overview.png)
 
-## Deploy on Vercel
+### Products
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Vista de login](/docs/product.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Team<>
+
+![Vista de login](/docs/team.png)
+
+## Pruebas Unitarias
+
+Las pruebas unitarias están diseñadas para garantizar el correcto funcionamiento de los endpoints de la API. Para ejecutarlas, utiliza el siguiente comando:
+
+```bash
+npm run test
+```
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia [MIT](URL_DE_LICENCIA).
