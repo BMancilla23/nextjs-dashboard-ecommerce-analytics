@@ -11,7 +11,7 @@ export const LogoutButton = () => {
   return (
     <div>
       <Button asChild onClick={() => signOut()}>
-        <Link href={"/"} className="flex gap-2">
+        <Link href={"/login"} className="flex gap-2">
           <LogOut />
           <span
             className={`${!isOpen && "max-md:hidden"} ${isOpen && "hidden"}`}
