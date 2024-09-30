@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 // import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "@/providers";
+import { ToastProvider } from "@/providers/toast-provider";
+import { NprogressBarProvider } from "@/providers/nprogress-bar";
 
 /* const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,14 +34,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       {/* <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body> */}
 
-      <body className={`antialiased ${poppins.className}`}>{children}</body>
+      <body
+        className={`antialiased ${poppins.className}`}
+        suppressHydrationWarning={true}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system">
+          <ToastProvider />
+          {children}
+          <NprogressBarProvider />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
