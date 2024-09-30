@@ -49,4 +49,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   session: {
     strategy: "jwt", // Usar JWT para las sesiones
   },
+  // Configurar trusted hosts para evitar el error "Untrusted Host"
+  trustHost: process.env.NEXTAUTH_TRUST_HOST === "true" || undefined,
 });
